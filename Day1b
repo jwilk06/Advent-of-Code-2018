@@ -1,0 +1,27 @@
+def reachedTwice(*sequence):
+    n = 0
+    l = list(sequence)
+    a = list()
+    while 1==1:
+        for i in l:
+            n = n + i
+            if n in a:
+                return n
+            else:
+                a.append(n)
+                
+                
+                
+reachedTwice(+1, -2, +3, +1)
+
+
+
+reachedTwice(+1, +1, +1)
+
+
+
+reachedTwice(+1, +1, -2)
+
+
+
+reachedTwice(-1, -2, -3)
