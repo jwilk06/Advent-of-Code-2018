@@ -1,0 +1,37 @@
+# This is the code for the practice built on pythontutor.com
+
+
+import string
+import io
+
+def Day2a():
+    f = io.StringIO('''ayitmcjvlhedbsyoqfzukjpxwt
+    agirmcjvlheybsyogfzuknpxxt
+    wgirmcjvlvedbsyoqfzujnpxwt
+    agizmcjvlhedbsyoqfzuenlxwt
+    aryrmcjvlheebsyoqfzuknpxwt
+    agirmcjelhedbsyoqfzukosxwt''')
+    d = 0
+    t = 0
+    w = {}
+    alphbt = list(string.ascii_lowercase)
+    for i in f:
+        i = i.strip()
+        for m in alphbt:
+            w[m] = i.count(m)
+#        for y in w.values():
+#            if y == 2:
+#                d = d+1
+#            elif y ==3:
+#                t = t+1
+#            else:
+#                pass
+        if 2 in w.values():
+          d=d+1
+        if 3 in w.values():
+          t=t+1
+    checkSum = d*t
+    return checkSum
+
+
+Day2a()
